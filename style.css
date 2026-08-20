@@ -97,3 +97,8 @@ section{
     align-items: center;
     margin: 10px 0 ;
 }
+
+.currency-value-to-convert, .currency-value, .currency{
+    color: black;
+    font-weight: 700;
+}

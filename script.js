@@ -13,7 +13,7 @@ function convertValues(){
     const bitcoinToday = 378000
     const libraToday = 7.1
     
-    if(currencyToConvert == "real"){
+    if(currencyToConvert.value == "real"){
         currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", { 
             style: "currency", 
             currency: "BRL" 
@@ -21,7 +21,7 @@ function convertValues(){
 
     }
 
-    if(currencyToConvert == "dolar"){
+    if(currencyToConvert.value == "dolar"){
         currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", { 
             style: "currency", 
             currency: "USD" 
@@ -29,7 +29,7 @@ function convertValues(){
 
     }
 
-    if(currencyToConvert == "euro"){
+    if(currencyToConvert.value == "euro"){
         currencyValueToConvert.innerHTML = new Intl.NumberFormat("de-DE", { 
             style: "currency", 
             currency: "EUR" 
@@ -37,7 +37,7 @@ function convertValues(){
 
     }
 
-    if(currencyToConvert == "bitcoin"){
+    if(currencyToConvert.value == "bitcoin"){
         currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", { 
             style: "currency", 
             currency: "BRL" 
@@ -45,7 +45,7 @@ function convertValues(){
 
     }
 
-    if(currencyToConvert == "libra"){
+    if(currencyToConvert.value == "libra"){
         currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-GB", { 
             style: "currency", 
             currency: "GBP" 

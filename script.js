@@ -25,7 +25,7 @@ function convertValues(){
         currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", { 
             style: "currency", 
             currency: "USD" 
-        }).format(inputCurrencyValue / dolarToday)
+        }).format(inputCurrencyValue)
 
     }
 
@@ -33,7 +33,7 @@ function convertValues(){
         currencyValueToConvert.innerHTML = new Intl.NumberFormat("de-DE", { 
             style: "currency", 
             currency: "EUR" 
-        }).format(inputCurrencyValue / euroToday)
+        }).format(inputCurrencyValue)
 
     }
 
@@ -45,17 +45,17 @@ function convertValues(){
 
     }
 
-    if(currencyToConvert == "real"){
-        currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", { 
+    if(currencyToConvert == "libra"){
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-GB", { 
             style: "currency", 
-            currency: "BRL" 
-        }).format(inputCurrencyValue)
+            currency: "GBP" 
+        }).format(inputCurrencyValue/realToday)
 
     }
     
 
     if(currencyConverted.value == "real"){
-        currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", { 
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", { 
             style: "currency", 
             currency: "BRL" 
         }).format(inputCurrencyValue/ realToday)
@@ -89,36 +89,34 @@ function convertValues(){
         }).format(inputCurrencyValue / libraToday)
     }
 
-
-
 }
 
 function changeIcons() {
     const currencyImg = document.querySelector(".currency-img")
-    const currencyName = document.querySelector(".currency-name-to-convert")
+    const currencyNameToConvert = document.querySelector(".currency-name-to-convert")
 
         if(currencyToConvert.value == "real"){
-        currencyName.innerHTML = "Real"
+        currencyNameToConvert.innerHTML = "Real"
         currencyImg.src = "./assets/brasil.png"
     }
 
         if(currencyToConvert.value == "dolar"){
-        currencyName.innerHTML = "Dólar Americano"
+        currencyNameToConvert.innerHTML = "Dólar Americano"
         currencyImg.src = "./assets/usa.png"
     }
 
         if(currencyToConvert.value == "bitcoin"){
-        currencyName.innerHTML = "bitcoin"
+        currencyNameToConvert.innerHTML = "bitcoin"
         currencyImg.src = "./assets/bitcoin.png"
     }
 
     if(currencyToConvert.value == "euro"){
-        currencyName.innerHTML = "Euro"
+        currencyNameToConvert.innerHTML = "Euro"
         currencyImg.src = "./assets/euro.png"
     }
 
     if(currencyToConvert.value == "libra"){
-        currencyName.innerHTML = "Libra"
+        currencyNameToConvert.innerHTML = "Libra"
         currencyImg.src = "./assets/libra.png"
     }
 
